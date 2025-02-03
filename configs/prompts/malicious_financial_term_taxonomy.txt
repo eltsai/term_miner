@@ -1,0 +1,23 @@
+### Categories and Subcategories of Financial Terms:
+- Immediate Automatic Subscription: Forcing users to subscribe to extra products.
+- Automatic Subscription after Free Trial: Automatically subscribing users after free trials.
+- Unilateral Unauthorized Account Upgrades: Automatically upgrading user accounts without prior notice.
+- Late or Unsuccessful Payment Penalty: Charging penalties for late or failed payments.
+- Overuse Penalty: Charging penalties for overuse of services.
+- Non-Refundable Subscription Fee: Charging subscription fees that are non-refundable.
+- No Refund for Purchase: Denying refunds for purchased items.
+- Strict No Cancellation Policy: Not allowing users to cancel services.
+- Retroactive Application of Price Change: Applying price changes retroactively.
+- Cancellation Fee or Penalty: Charging fees for cancelling services.
+- Non-Refundable Additional Fee: Charging non-refundable additional fees for services, transfers, pre-authorization, subscription upgrade, handling product, etc.
+- Non-Monetary Refund Alternatives: Issuing refunds only in the form of store credit, exchanges, coupon codes, or loyalty points instead of direct monetary refunds.
+- No Responsibility for Delivery Delays: Refusing responsibility for delayed deliveries.
+- Customers Responsible for Shipping Issues: Making customers handle shipping problems.
+- Customers Pay Return Shipping: Forcing customers to pay for return shipping.
+- Restocking Fee: Charging fees for restocking returned items.
+- Account Recovery Fee: Charging fees to recover user accounts.
+- Digital Currency, Reward, Money Seizure on Inactivity: Seizing digital currency or rewards due to account inactivity.
+- Digital Currency, Reward, Money Seizure on Termination or Account Closure: Seizing digital currency or rewards upon account termination or closure.
+- Exorbitant Legal Document Request Fee: Charging excessive fees for accessing legal documents.
+- Forced Waiver of Legal Protections: Requiring users to waive their legal rights.
+- Forced Waiver of Class Action Rights: Requiring users to waive the right to join class actions.

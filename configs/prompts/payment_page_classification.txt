@@ -1,0 +1,30 @@
+Given the HTML content of a webpage, perform two tasks:
+
+1. Determine if the webpage is a payment page. Reply with "1" if it is a payment page, and "0" if it is not a payment page.
+2. Extract information about products being sold on this page, if any. Provide the product details in JSON format, including the product's name, type, category, and price, along with any shipping charges if applicable.
+
+Use the following structure for the JSON output:
+{{
+  "is_payment_page": "<Reply with 1 or 0>",
+  "products": [
+    {{
+      "name": "Product Name",
+      "type": "Product Type",
+      "category": "Product Category",
+      "price": "Product Price",
+      "shipping_charge": "Shipping Charge"
+    }}
+    // Add more products as necessary
+  ]
+}}
+
+For example, if no products are identified on a non-payment page, reply with:
+{{
+  "is_payment_page": "0",
+  "products": []
+}}
+Reply the json format only.
+
+
+HTML Content:
+{0}

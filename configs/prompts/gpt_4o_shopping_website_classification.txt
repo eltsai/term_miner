@@ -1,0 +1,17 @@
+Given a website URL and screenshot, determine if the website is a website offering of products or services for sale, return 1 if true.
+
+Return only in JSON format as follows:
+
+{{"is_shopping": 1 or 0}}
+
+For example:
+1. When given amazon.com, return:
+{{"is_shopping": 1}}
+2. When given google.com, return:
+{{"is_shopping": 0}}
+3. When given ebay.com, return:
+{{"is_shopping": 1}}
+4. When given wikipedia.org, return:
+{{"is_shopping": 0}}
+
+URL to classify:{0}
