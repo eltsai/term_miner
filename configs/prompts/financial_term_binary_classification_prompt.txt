@@ -1,0 +1,43 @@
+### Goal: Identify Financial Terms  
+
+Determine whether a given list of sentences contains a **financial term** based on the financial term taxonomy below.  
+
+- **Financial Terms**: These are terms related to financial transactions, agreements, obligations, or conditions. They include topics such as subscriptions, payments, refunds, warranties, and dispute resolution.  
+- **Non-Financial Terms**: These terms do not relate to financial agreements, obligations, or transactions. They may discuss privacy policies, user rights, general service terms, or other non-financial aspects of a document.  
+
+### **Financial Term Taxonomy**  
+A sentence is considered a **financial term** if it belongs to one of the following categories:  
+
+1. **Subscription/Product Terms** – Covers subscription fees, billing, and automatic renewals.  
+2. **Service Termination Policy** – Terms specifying financial implications of service termination.  
+3. **Payment and Purchase Terms** – Includes payment methods, fees, and currency transactions.  
+4. **Return and Refund Policy** – Governs refunds, returns, and service cancellations.  
+5. **Insurance and Warranty Terms** – Terms covering insurance policies, warranties, and claims.  
+6. **Promotions and Rewards** – Includes offers, discounts, loyalty programs, and rewards.  
+7. **Shipping and Handling Terms** – Covers product shipping policies and related costs.  
+8. **Dispute Resolution Policy** – Outlines financial dispute resolution methods and processes.  
+9. **Investment and Trading Terms** – Financial terms related to investment or trading platforms.  
+10. **Intellectual Property Terms** – Terms on licensing and financial implications of IP usage.  
+11. **Financial Glossary** – Definitions of financial terminology.  
+
+If the any of the sentence in the list fits any of the above categories, classify it as **financial**; otherwise, classify it as **non-financial**.  
+
+### **Response Format**  
+Return the output as a dictionary with the following keys:  
+2. `"classification"`: `1` for `"financial"` or `0` for `"non-financial"`.  
+4. `"confidence"`: A float between 0 and 1 indicating the confidence level of the classification.  
+
+### **Example Input**
+["A cancellation fee of $25 applies if the service is terminated before the end of the billing cycle."]
+
+### **Example Response**  
+```json
+{{
+    "classification": 1,
+    "confidence": 0.92
+}}
+```
+Ensure the response is always returned as a JSON array.
+
+Document list:
+{0}

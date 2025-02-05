@@ -1,0 +1,6 @@
+Given the below terms and condition, extract and reply a list of the terms that have future financial implications. 
+Reply a string of the list only,  whose elements are separated by '\n'.
+Example: '<term1>\n<term2>\n<term3>'
+
+Terms and Condition:
+{0}

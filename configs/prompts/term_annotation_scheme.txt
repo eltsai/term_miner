@@ -1,0 +1,68 @@
+Instructions for Annotating T&C Dataset
+
+You are tasked with annotating a Terms and Conditions (T&C) dataset. Below are the classification labels for a given paragraph:
+
+1. Company Profile: Legal identity, physical location, and official registration details of the company.
+2. Product or Service Overview: Descriptions of the offerings.
+3. Glossary of Terms: Essential definitions and explanations of terminology used within the agreement.
+4. Terms Management: User agreement to both initial and subsequent updates of service or product terms.
+5. User Conduct and Engagement Principles: Highlights user responsibilities for maintaining a respectful and safe environment when using the service/product.
+6. Seller Obligations: Specific duties and behaviors expected from the seller.
+7. User Privileges: Specific rights and benefits afforded to users.
+8. Intellectual Property: Guidelines on the use and protection of intellectual property.
+9. Privacy and Data Collection: Data handling and privacy practices, including personalized recommendations and customer profiling.
+10. Usage Restrictions: What users are explicitly forbidden to do with the product, service, or content provided.
+11. Access Termination: Criteria and procedures for discontinuing user access.
+12. Conflict Resolution: Outlines methods for resolving disputes, including Arbitration, Mediation, Litigation, Governing Law, Notice and Cure Periods, Indemnification, Liability, Severability, and Alternative Dispute Resolution (ADR).
+13. Compliance with Laws: Requirement for adherence to applicable legal standards.
+14. Payment and Billing: Details on accepted payment methods and billing cycles.
+15. Returns and Refund: Guidelines for product returns and service cancellations, including conditions for eligibility and refund processes.
+16. Customer Support: Details about customer support, including support email and support phone number.
+17. Warranty: A guarantee (or lack of guarantee) about the condition, quality, performance, or durability of a product or service.
+18. Product Delivery: Shipping/delivery terms.
+19. Risk Acknowledgment: Highlighting the acceptance of potential risks and the transfer of responsibility in transactions or use of services/products.
+20. Communication Consent: Agreement to receive messages, including marketing and transactional updates, via preferred contact methods.
+21. Service Denial Policies: Conditions under which access to orders, services, or accounts may be restricted.
+22. Order Changes Communication: Procedures for informing customers about order adjustments or cancellations.
+23. Promotional Terms: Guidelines governing participation in promotions, rewards, contests, sweepstakes, discounts, and marketing campaigns, detailing eligibility, obligations, and limitations.
+
+Your output should be in JSON format and contain two fields: `topic_classification` and `has_financial_term`.
+
+ 
+`topic_classification`: Indicates one or multiple of the 21 predefined topics. If none apply, return "Others".
+`has_financial_term`: Indicates if the terms in a sentence have financial implications for customers.
+
+
+Example Input 1:
+```
+We each agree to make attempts to resolve this dispute within sixty (60) days of receipt of the notice to arbitrate, then We may submit the dispute to formal arbitration. 
+```
+
+Desired Output 1:
+```
+{{
+    "topic_classification": "Conflict Resolution", 
+    "has_financial_term": 0,
+}},
+
+```
+
+
+Example Input 2:
+```
+You will only be billed for the ActivCiti Fitness App subscription 6 days after placing your order, and the subscription will renew monthly up until cancellation. 
+```
+
+
+Desired Output 2:
+```
+{{
+    "topic_classification": "Payment and Billing", 
+    "has_financial_term": 1,
+}}
+```
+
+Reply in JSON format only.
+
+Below is the paragraph to annotate: 
+{0}

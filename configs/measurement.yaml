@@ -1,0 +1,94 @@
+openai:
+  api_key_loc: api_token
+
+
+file_loc:
+  #######################################
+  # Load Tranco
+  #######################################
+  tranco: 'data/tranco/top-1m.csv.zip'
+  main_dir: 'data/tranco/' 
+  screenshot_dir: 'data/tranco/screenshots/'
+  stats_loc: 'data/tranco/stats/tranco_{}_{}.txt'
+  stats_dir: 'data/tranco/stats/'
+  entc_website_loc: 'data/tranco/entc_websites_{}_{}.json'
+  shopping_terms_dir: 'data/tranco/shopping_terms/'
+  non_shopping_terms_dir: 'data/tranco/non_shopping_terms/'
+  cluster_dir: 'data/tranco/clusters/'
+  embedding_dir: 'data/tranco/embeddings/'
+  sanitized_dir: 'data/tranco/sanitized/'
+  sanitized_files: 
+  - sanitized_split1.csv
+  - sanitized_split2.csv
+  - sanitized_split3.csv
+  - sanitized_split4.csv
+  unfavorable_terms: 'data/tranco/sanitized/unfavorable_terms_split{}.csv'
+  unfavorable_terms_parsed: 'data/tranco/sanitized/unfavorable_terms_parsed_split{}.csv'
+  unfavorable_terms_parsed_error: 'data/tranco/sanitized/unfavorable_terms_parsed_error_split{}.csv'
+  output_dir: 'data/tranco/output/'
+
+  # #######################################
+  # # Load FCWs dataset
+  # #######################################
+  # main_dir: 'data/fcw/' 
+  # screenshot_dir: 'data/fcw/screenshots/'
+  # stats_loc: 'data/fcw/stats/fcw_{}_{}.txt'
+  # stats_dir: 'data/fcw/stats/'
+  # entc_website_loc: 'data/fcw/entc_websites_{}_{}.json'
+  # shopping_terms_dir: 'data/fcw/shopping_terms/'
+  # non_shopping_terms_dir: 'data/fcw/non_shopping_terms/'
+  # cluster_dir: 'data/fcw/clusters/'
+  # embedding_dir: 'data/fcw/embeddings/'
+  # sanitized_dir: 'data/fcw/sanitized/'
+  # sanitized_files: 
+  # - sanitized_split1.csv
+  # - sanitized_split2.csv
+  # - sanitized_split3.csv
+  # - sanitized_split4.csv
+  # unfavorable_terms: 'data/fcw/sanitized/unfavorable_terms_split{}.csv'
+  # unfavorable_terms_parsed: 'data/fcw/sanitized/unfavorable_terms_parsed_split{}.csv'
+  # unfavorable_terms_parsed_error: 'data/fcw/sanitized/unfavorable_terms_parsed_error_split{}.csv'
+  # output_dir: 'data/fcw/output/'
+  # fcw_loc: 'data/fcw_dataset.jsonl'
+
+  #######################################
+  # Load FLOS dataset
+  #######################################
+  # main_dir: 'data/flos/' 
+  # screenshot_dir: 'data/flos/screenshots/'
+  # stats_loc: 'data/flos/stats/flos_{}_{}.txt'
+  # stats_dir: 'data/flos/stats/'
+  # entc_website_loc: 'data/flos/entc_websites_{}_{}.json'
+  # shopping_terms_dir: 'data/flos/shopping_terms/'
+  # non_shopping_terms_dir: 'data/flos/non_shopping_terms/'
+  # cluster_dir: 'data/flos/clusters/'
+  # embedding_dir: 'data/flos/embeddings/'
+  # sanitized_dir: 'data/flos/sanitized/'
+  # sanitized_files: 
+  # - sanitized_split1.csv
+  # - sanitized_split2.csv
+  # - sanitized_split3.csv
+  # - sanitized_split4.csv
+  # unfavorable_terms: 'data/flos/sanitized/unfavorable_terms_split{}.csv'
+  # unfavorable_terms_parsed: 'data/flos/sanitized/unfavorable_terms_parsed_split{}.csv'
+  # unfavorable_terms_parsed_error: 'data/flos/sanitized/unfavorable_terms_parsed_error_split{}.csv'
+  # output_dir: 'data/flos/output/'
+  # flos_loc: 'data/Fraudulent_online_shops_dataset.csv'
+
+model_config_loc:
+  gpt-3.5-turbo: 'config/gpt_3.5_turbo_config.yml'
+  gpt-4o: 'config/gpt_4o_config.yml'
+  gpt-4: 'config/gpt_4_config.yml'
+  gpt-4-turbo: 'config/gpt_4_turbo_config.yml'
+
+prompt_loc:
+  payment_classification: 'configs/prompts/payment_page_classification.txt'
+  financial_term_binary: 'configs/prompts/financial_term_binary_classification_prompt.txt'
+  comparsion_prompt: 'configs/prompts/comparison_prompt.txt'
+  website_classification_image: 'configs/prompts/gpt_4o_shopping_website_classification.txt'
+  website_classification_name: 'configs/prompts/gpt_3.5_shopping_website_classification.txt'
+  malicious_financial_term_classification: 'configs/prompts/malicious_financial_term_classification_prompt.txt'
+  malicious_financial_term_taxonomy: 'configs/prompts/malicious_financial_term_taxonomy.txt'
+
+measurement:
+  classifier: 'gpt-4o-mini@image'

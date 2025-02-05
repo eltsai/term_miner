@@ -1,0 +1,5 @@
+    Extract financial terms if they are not mentioned by product informtion. 
+    Reply a string of the list of original terms as is that are not disclosed by the product information only. Return a str of list with elements seperated by '\n'.
+    Example: '<term1>\n<term2>\n<term3>'
+    Product information: {0}
+    Financial terms: {1}

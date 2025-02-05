@@ -1,0 +1,32 @@
+### Goal: Idenfify Malicious Financial Term:
+Extract the malicious financial terms (paragraphs) from a Terms and Conditions document.
+
+- **Financial Terms**: These are terms that current or future financial impact on users, such as fees, penalties, subscriptions, refunds, or other financial conditions. They can be either malicious or benign.
+- **Malicious Financial Terms**: These terms involve practices that are unfair, deceptive, or harmful. This includes, but is not limited to, hidden fees, misleading information, or excessive penalties, which can financially disadvantage the user.
+- **Benign Terms**: These terms are either not financial, or characterized by fairness, transparency, and the absence of deceptive or harmful practices. They provide clear and straightforward financial conditions beneficial to all parties involved.
+
+{taxonomy}
+
+!Important! If it is reasonable using common sense, do not mark it as malicious, return 'benign'.
+
+### Response Instructions:
+Please return the output as a list of dictionaries. For each paragraph that contains a malicious financial term, provide a dictionary with the following keys:
+1. `"category"`: The category of the malicious financial term (as listed above).
+2. `"confidence"`: A float value between 0 and 1 indicating the confidence level of the term being malicious.
+
+If no malicious financial terms categories fit the paragraphs, make it a new one as fit.
+If no malicious financial terms are identified, return 'benign'.
+
+### Example Response:
+```json
+{{
+    "category": "The category of the malicious financial term.",
+    "confidence": 0.85
+}}
+```
+
+Make sure you return in json format.
+
+Pragraphs: 
+{document_list}
+
