@@ -130,7 +130,7 @@ Run:
 ```
 python measurement/4cluster.py --split=0 --cluster=True --chunk-num=5 --is-financial=True --eps=0.21
 ```
-to cluster and topic model the terms.
+to cluster and topic model the terms. In this paper, we use GPT-4o as an open-set column type annotator.
 
 # ShopTC-100K Dataset
 
